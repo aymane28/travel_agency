@@ -1,6 +1,5 @@
 package fr.lernejo.prediction;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.Stream;

@@ -8,9 +8,9 @@ import retrofit2.http.Path;
 import java.util.List;
 
 public interface PredictionEngineClient {
-
+/*
 
     @GET("/api/temperature/{country}")
     Call<List<Temperature>> getTravels(@Path("country") String country);
-
+*/
 }

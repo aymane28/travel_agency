@@ -58,7 +58,7 @@ public class SiteService {
         Inscription inscription = ReadInFileJson();
         List<String> listCountry=ReadFileContries("site/src/main/resources/countries.txt");
         ArrayList<Travels> travels=new ArrayList<>();
-        listCountry.forEach(x-> System.out.println(x));
+        //listCountry.forEach(x-> System.out.println(x));
         for(String country : listCountry){
             if(!country.equals(inscription.getUserCountry())){
                 Double temp=getTemperature(country);

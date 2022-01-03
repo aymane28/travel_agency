@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import org.json.simple.JSONObject;
-import javax.websocket.server.PathParam;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -16,9 +16,10 @@ import java.io.IOException;
 public class InscriptionController {
     @Autowired
     private final SiteService siteService;
-
-    public InscriptionController( SiteService siteService) {
+    private final Inscription inscription = null;
+    public InscriptionController(SiteService siteService) {
         this.siteService = siteService;
+
     }
 
     @PostMapping("/api/inscription")
@@ -39,6 +40,7 @@ public class InscriptionController {
             } catch (IOException e) {e.printStackTrace();}
         return inscription;
 }
+
 
    @GetMapping("/api/travels")
     public ArrayList<Travels> getTravels(@RequestParam(value = "userName") String userName) throws Exception {

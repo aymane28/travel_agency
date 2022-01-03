@@ -19,6 +19,7 @@ public class Inscription {
         this.minimumTemperatureDistance = minimumTemperatureDistance;
     }*/
 
+
     @JsonCreator
     public Inscription(@JsonProperty("userEmail") String userEmail, @JsonProperty("userName") String userName, @JsonProperty("userCountry") String userCountry, @JsonProperty("weatherExpectation") String weatherExpectation, @JsonProperty("minimumTemperatureDistance") Long minimumTemperatureDistance) {
         this.userEmail = userEmail;

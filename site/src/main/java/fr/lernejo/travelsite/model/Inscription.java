@@ -32,28 +32,19 @@ public class Inscription {
         return userEmail;
     }
 
-
-
     public String getUserName() {
         return userName;
     }
-
 
     public String getUserCountry() {
         return userCountry;
     }
 
-
-
     public String getWeatherExpectation() {
         return weatherExpectation;
     }
 
-
-
     public Long getMinimumTemperatureDistance() {
         return minimumTemperatureDistance;
     }
-
-
 }

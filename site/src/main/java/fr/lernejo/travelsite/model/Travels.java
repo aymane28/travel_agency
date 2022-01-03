@@ -11,7 +11,7 @@ public class Travels {
     private final Double temperature;
 
     @JsonCreator
-    public Travels(@JsonProperty("name") String country,@JsonProperty("temperature") Double temperature) {
+    public Travels(@JsonProperty("country") String country,@JsonProperty("temperature") Double temperature) {
         this.country = country;
         this.temperature = temperature;
     }
@@ -23,6 +23,5 @@ public class Travels {
     public Double getTemperature() {
         return temperature;
     }
-
 
 }

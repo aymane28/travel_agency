@@ -41,7 +41,7 @@ public class InscriptionController {
 }
 
    @GetMapping("/api/travels")
-    public ArrayList<Travels> getTravels(@PathParam(value = "userName") String userName) throws Exception {
+    public ArrayList<Travels> getTravels(@RequestParam(value = "userName") String userName) throws Exception {
         return siteService.getTravels();
     }
 }

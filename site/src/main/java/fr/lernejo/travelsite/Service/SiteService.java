@@ -59,7 +59,8 @@ public class SiteService {
         List<String> listCountry=ReadFileContries("site/src/main/resources/countries.txt");
         ArrayList<Travels> travels=new ArrayList<>();
         listCountry.forEach(x-> System.out.println(x));
-        for(String country : listCountry){if(!country.equals(inscription.getUserCountry())){
+        for(String country : listCountry){
+            if(!country.equals(inscription.getUserCountry())){
                 Double temp=getTemperature(country);
                 if(inscription.getWeatherExpectation().equals("WARMER")){
                     if(temp> inscription.getMinimumTemperatureDistance()){Travels travel1=new Travels(country, temp);

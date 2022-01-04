@@ -20,7 +20,7 @@ public class Launcher {
 
         SpringApplication.run(Launcher.class, args);
     }
-/*
+
     @Bean
     PredictionEngineClient predictionEngineClient() {
         Retrofit retrofit = new Retrofit.Builder()
@@ -28,5 +28,5 @@ public class Launcher {
             .build();
         return retrofit.create(PredictionEngineClient.class);
 
-    }*/
+    }
 }

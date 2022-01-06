@@ -25,7 +25,7 @@ public class InscriptionController {
     @PostMapping("/api/inscription")
     @ResponseBody
     public Inscription createProduct(@RequestBody Inscription inscription) {
-        JSONObject obj = new JSONObject();
+        /*JSONObject obj = new JSONObject();
         FileWriter  file = null;
         obj.put("userEmail", inscription.getUserEmail());
         obj.put("userName", inscription.getUserName());
@@ -37,7 +37,7 @@ public class InscriptionController {
             file.write(obj.toJSONString());
         } catch (IOException e) {e.printStackTrace();}
                 try {file.close();
-            } catch (IOException e) {e.printStackTrace();}
+            } catch (IOException e) {e.printStackTrace();}/*/
         return inscription;
 }
 

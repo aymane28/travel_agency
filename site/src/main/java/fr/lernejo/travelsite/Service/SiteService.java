@@ -2,7 +2,7 @@ package fr.lernejo.travelsite.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import fr.lernejo.prediction.TemperatureService;
+//import fr.lernejo.prediction.TemperatureService;
 import fr.lernejo.travelsite.PredictionEngineClient;
 import fr.lernejo.travelsite.model.Inscription;
 import fr.lernejo.travelsite.model.Travels;
@@ -22,7 +22,7 @@ public class SiteService {
 
    // private final PredictionEngineClient predictionEngineClient;
 
-    public final TemperatureService temperatureService= new TemperatureService();
+    //public final TemperatureService temperatureService= new TemperatureService();
 
     /*public SiteService(PredictionEngineClient predictionEngineClient) {
         this.predictionEngineClient = predictionEngineClient;
@@ -45,9 +45,9 @@ public class SiteService {
         }*/
         return resultList;
     }
-    public Double getTemperature(String country) {
+   /* public Double getTemperature(String country) {
         return temperatureService.getTemperature(country);
-    }
+    }*/
     public Inscription ReadInFileJson() throws Exception {
             ObjectMapper objectMapper = new ObjectMapper();
         Inscription inscription = objectMapper.readValue(new File("site/src/main/resources/json/inscription.json"), Inscription.class);
@@ -61,7 +61,7 @@ public class SiteService {
         //listCountry.forEach(x-> System.out.println(x));
         for(String country : listCountry){
             if(!country.equals(inscription.getUserCountry())){
-                Double temp=getTemperature(country);
+                Double temp=25.5;
                 if(inscription.getWeatherExpectation().equals("WARMER")){
                     if(temp> inscription.getMinimumTemperatureDistance()){Travels travel1=new Travels(country, temp);
                         travels.add(travel1);}}else{

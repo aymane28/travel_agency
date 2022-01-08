@@ -19,14 +19,13 @@ import java.util.stream.Stream;
 @Service
 public class SiteService {
 
-
-   // private final PredictionEngineClient predictionEngineClient;
+   private final PredictionEngineClient predictionEngineClient;
 
     //public final TemperatureService temperatureService= new TemperatureService();
 
-    /*public SiteService(PredictionEngineClient predictionEngineClient) {
+    public SiteService(PredictionEngineClient predictionEngineClient) {
         this.predictionEngineClient = predictionEngineClient;
-    }*/
+    }
 
     public List<String> ReadFileContries(String path) {
         //Stream<String> result = null;

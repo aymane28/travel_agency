@@ -1,16 +1,15 @@
 package fr.lernejo.travelsite;
 
 //import fr.lernejo.prediction.Temperature;
-import org.springframework.stereotype.Component;
+import fr.lernejo.travelsite.model.TemperatureApp;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
-
-import java.util.List;
+import retrofit2.http.Query;
 
 public interface PredictionEngineClient {
 
-   /* @GET("/api/temperature/{country}")
-    Call<Temperature> getTravels(@Path("country") String country);
-*/
+    @GET("/api/temperature")
+    Call<TemperatureApp> getTemperature(@Path("country") String country);
+
 }

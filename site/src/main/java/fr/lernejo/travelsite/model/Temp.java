@@ -1,11 +1,10 @@
-package fr.lernejo.prediction;
+package fr.lernejo.travelsite.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Temp {
-
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private final String date;
     private final Double temperature;
@@ -23,5 +22,4 @@ public class Temp {
     public Double getTemperature() {
         return temperature;
     }
-
 }
